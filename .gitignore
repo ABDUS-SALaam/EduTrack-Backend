@@ -5,7 +5,9 @@ node_modules/
 dist/
 
 # Environment files
-.env
+.env.development
+.env.production
+
 
 # Logs
 logs/
