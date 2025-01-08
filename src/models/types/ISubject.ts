@@ -1,5 +1,5 @@
 import { Document, Schema } from 'mongoose';
-export default interface ISubject extends Document {
-  subjectId: Schema.Types.ObjectId;
+export interface ISubject extends Document {
+  name: string;
   parentSubjectId: Schema.Types.ObjectId;
 }

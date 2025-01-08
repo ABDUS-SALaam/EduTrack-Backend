@@ -1,13 +1,11 @@
-import { Schema, model, Document } from 'mongoose';
+import { Schema, model } from 'mongoose';
+import { ISubject } from './types';
 
-interface Isubject extends Document {
-  name: string;
-}
-
-const subjectSchema = new Schema<Isubject>({
+const subjectSchema = new Schema<ISubject>({
   name: { type: String, required: true },
+  parentSubjectId: { type: Schema.Types.ObjectId, optional: true },
 });
 
-const Subject = model<Isubject>('Classroom', subjectSchema);
+const Subject = model<ISubject>('Subject', subjectSchema);
 
 export default Subject;

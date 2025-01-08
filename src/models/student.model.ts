@@ -1,12 +1,7 @@
-import { Schema, model, Document } from 'mongoose';
-
-interface IStudent extends Document {
-  id: string;
-  name: string;
-}
+import { Schema, model } from 'mongoose';
+import { IStudent } from './types';
 
 const studentSchema = new Schema<IStudent>({
-  id: { type: String, required: true, unique: true, trim: true },
   name: { type: String, required: true },
 });
 

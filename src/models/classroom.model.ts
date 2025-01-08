@@ -1,15 +1,14 @@
-import { Schema, model, Document } from 'mongoose';
+import { Schema, model } from 'mongoose';
+import { IClassroom } from './types';
 
-interface Iclassroom extends Document {
-  id: string;
-  name: string;
-}
-
-const classroomSchema = new Schema<Iclassroom>({
-  id: { type: String, required: true, unique: true },
+const classroomSchema = new Schema<IClassroom>({
   name: { type: String, required: true },
+  description: { type: String },
+  academicYear: { type: String, required: true },
+  startDate: { type: Date, required: true },
+  endDate: { type: Date, required: true },
 });
 
-const Classroom = model<Iclassroom>('Classroom', classroomSchema);
+const Classroom = model<IClassroom>('Classroom', classroomSchema);
 
 export default Classroom;
