@@ -28,6 +28,9 @@ Before you begin, ensure you have the following installed on your machine:
 - [MongoDB](https://www.mongodb.com/) (local or cloud-based)
 - [Git](https://git-scm.com/)
 
+## DB desgin
+- https://app.eraser.io/workspace/dMgKxmUVV1PYr7Os2tq9?origin=share
+
 ## Getting Started
 
 Follow these steps to set up the project locally:
