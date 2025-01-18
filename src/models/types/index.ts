@@ -2,7 +2,7 @@ export * from './IUser';
 export * from './IClassroom';
 export * from './IStudent';
 export * from './ISubject';
-export * from './IAssessmentCreteria';
+export * from './IAssessmentCriteria ';
 
 export * from './IScore';
 export * from './IAssessment';

@@ -2,6 +2,7 @@ import mongoose, { Schema, Model } from 'mongoose';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import { IUser } from './types';
+import { SchemaNames } from '../constants';
 
 const UserSchema: Schema<IUser> = new Schema(
   {
@@ -91,6 +92,6 @@ UserSchema.pre<IUser>('save', async function (next) {
   next();
 });
 
-const User: Model<IUser> = mongoose.model<IUser>('User', UserSchema);
+const User: Model<IUser> = mongoose.model<IUser>(SchemaNames.User, UserSchema);
 
 export default User;

@@ -1,9 +1,10 @@
-import { Document } from 'mongoose';
+import { Document, Schema } from 'mongoose';
 
 export interface IClassroom extends Document {
-  name: string;
+  title: string;
   description: string;
   academicYear: string;
   startDate: Date;
   endDate: Date;
+  createdByUserId: Schema.Types.ObjectId;
 }

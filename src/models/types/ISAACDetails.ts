@@ -1,9 +1,10 @@
-import { Document, Schema } from 'mongoose';
+import mongoose, { Document } from 'mongoose';
+
 //Subject_Assessment_AssessmentCriteria_Details (ISAACDetails)
 export interface ISAACDetails extends Document {
-  assessmentId: Schema.Types.ObjectId;
-  subjectId: Schema.Types.ObjectId;
-  assessmentCriteriaId: Schema.Types.ObjectId;
+  assessmentId: mongoose.Types.ObjectId;
+  subjectId: mongoose.Types.ObjectId;
+  assessmentCriteriaId: mongoose.Types.ObjectId;
   unitMaxMarks: number;
-  childSubjectId: Schema.Types.ObjectId | null;
+  childSubjectId: mongoose.Types.ObjectId | null;
 }

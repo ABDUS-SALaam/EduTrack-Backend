@@ -1,5 +1,6 @@
 import { Schema, model } from 'mongoose';
 import { IUserClassroomMapping } from './types';
+import { SchemaNames } from '../constants';
 
 const UserClassEnrollmentSchema = new Schema<IUserClassroomMapping>({
   userId: { type: Schema.Types.ObjectId, required: true },
@@ -7,7 +8,7 @@ const UserClassEnrollmentSchema = new Schema<IUserClassroomMapping>({
 });
 
 const UserClassEnrollment = model<IUserClassroomMapping>(
-  'UserClassEnrollment ',
+  SchemaNames.UserClassEnrollment,
   UserClassEnrollmentSchema
 );
 

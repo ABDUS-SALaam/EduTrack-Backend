@@ -1,5 +1,6 @@
 import { Schema, model } from 'mongoose';
 import { IStudentClassroomMapping } from './types';
+import { SchemaNames } from '../constants';
 
 const StudentClassEnrollmentSchema = new Schema<IStudentClassroomMapping>({
   rollNumber: { type: Schema.Types.ObjectId, required: true },
@@ -8,7 +9,7 @@ const StudentClassEnrollmentSchema = new Schema<IStudentClassroomMapping>({
 });
 
 const StudentClassEnrollment = model<IStudentClassroomMapping>(
-  'StudentClassEnrollment ',
+  SchemaNames.StudentClassEnrollment,
   StudentClassEnrollmentSchema
 );
 
