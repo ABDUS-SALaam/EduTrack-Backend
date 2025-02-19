@@ -1,0 +1,2 @@
+#!/bsh/sh
+npm run eslint
